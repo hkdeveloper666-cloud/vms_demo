@@ -1,0 +1,53 @@
+/* Hospital Portal Specific Styles */
+
+.hospital-badge-status {
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.patient-action-box {
+  background: var(--glass-bg-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+.vaccine-status-radio-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.status-radio-card {
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  cursor: pointer;
+  background: var(--glass-bg);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-radio-card:hover {
+  border-color: var(--primary);
+  background: rgba(91, 141, 239, 0.05);
+}
+
+.status-radio-card.selected-success {
+  border-color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.status-radio-card.selected-danger {
+  border-color: var(--accent-rose);
+  background: rgba(239, 68, 68, 0.08);
+}

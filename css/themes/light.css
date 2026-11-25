@@ -1,0 +1,13 @@
+/* Light Theme Default */
+[data-theme="light"] {
+  --bg-app: #F3F6FC;
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --dark-navy: #17233D;
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.42);
+  --glass-bg-solid: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-border-subtle: rgba(226, 232, 240, 0.8);
+  --glass-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,221 @@
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--primary-glow);
+  }
+  50% {
+    box-shadow: 0 0 30px var(--primary-glow);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes rotateSpinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Helper animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.3s var(--transition-smooth) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s var(--transition-smooth) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s var(--transition-smooth) forwards;
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Skeleton Loading Effect */
+.skeleton {
+  background: linear-gradient(90deg, rgba(226, 232, 240, 0.4) 25%, rgba(226, 232, 240, 0.8) 50%, rgba(226, 232, 240, 0.4) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+[data-theme="dark"] .skeleton {
+  background: linear-gradient(90deg, rgba(30, 41, 59, 0.5) 25%, rgba(51, 65, 85, 0.7) 50%, rgba(30, 41, 59, 0.5) 75%);
+  background-size: 200% 100%;
+}
+
+/* Initial Application Loader */
+.app-initial-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: radial-gradient(circle at 50% 30%, rgba(91, 141, 239, 0.22) 0%, transparent 60%),
+              radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.18) 0%, transparent 60%),
+              var(--bg-app);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+
+.app-initial-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.03);
+  pointer-events: none;
+}
+
+.loader-glass-card {
+  background: var(--glass-bg-solid);
+  backdrop-filter: var(--glass-blur-lg);
+  -webkit-backdrop-filter: var(--glass-blur-lg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  max-width: 360px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scaleIn 0.35s var(--transition-smooth);
+}
+
+.loader-logo-wrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-shield-svg {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 4px 10px rgba(91, 141, 239, 0.3));
+}
+
+.loader-spinner-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--primary);
+  border-right-color: var(--secondary);
+  animation: rotateSpinner 1s linear infinite;
+  z-index: 1;
+}
+
+.loader-brand-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--dark-navy);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+}
+
+.loader-message {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Page Navigation Top Progress Bar */
+.page-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  z-index: 99999;
+  transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  pointer-events: none;
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* Button Loading Spinner */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.btn-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #FFFFFF;
+  border-radius: 50%;
+  animation: rotateSpinner 0.65s linear infinite;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.btn-secondary.btn-loading .btn-spinner,
+.btn-ghost.btn-loading .btn-spinner {
+  border: 2px solid rgba(91, 141, 239, 0.3);
+  border-top-color: var(--primary);
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

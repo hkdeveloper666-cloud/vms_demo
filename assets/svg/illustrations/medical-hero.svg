@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B8DEF" />
+      <stop offset="100%" stop-color="#A78BFA" />
+    </linearGradient>
+    <linearGradient id="glassCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.3)" />
+    </linearGradient>
+    <linearGradient id="syringeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#5B8DEF" />
+    </linearGradient>
+    <filter id="floatShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#1E293B" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Big Central Glass Shield Behind -->
+  <path d="M300 45 C410 45 480 95 480 200 C480 325 335 410 300 435 C265 410 120 325 120 200 C120 95 190 45 300 45 Z"
+        fill="url(#shieldGrad)" opacity="0.12" />
+  
+  <path d="M300 65 C395 65 455 110 455 200 C455 305 330 380 300 405 C270 380 145 305 145 200 C145 110 205 65 300 65 Z"
+        stroke="url(#shieldGrad)" stroke-width="3" stroke-dasharray="8 6" opacity="0.5" />
+
+  <!-- Floating Glass Card: Immunization Milestone -->
+  <g filter="url(#floatShadow)">
+    <rect x="70" y="110" width="220" height="110" rx="20" fill="url(#glassCardGrad)" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" />
+    <circle cx="108" cy="148" r="22" fill="#EEF2FF" />
+    <!-- Checkmark shield icon -->
+    <path d="M102 148 L106 152 L115 143" stroke="#5B8DEF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="140" y="145" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="700" fill="#17233D">100% Protected</text>
+    <text x="140" y="162" font-family="Inter, sans-serif" font-size="11" fill="#64748B">All Primary Doses Done</text>
+    <rect x="140" y="176" width="120" height="6" rx="3" fill="#E2E8F0" />
+    <rect x="140" y="176" width="120" height="6" rx="3" fill="#10B981" />
+  </g>
+
+  <!-- Central Medical Cross Ring -->
+  <g transform="translate(300, 235)">
+    <circle cx="0" cy="0" r="82" fill="#FFFFFF" filter="url(#floatShadow)" />
+    <circle cx="0" cy="0" r="82" stroke="url(#shieldGrad)" stroke-width="4" fill="none" opacity="0.8" />
+    <circle cx="0" cy="0" r="68" fill="rgba(91, 141, 239, 0.08)" />
+
+    <!-- Stylized Medical Cross with Smooth Corners -->
+    <rect x="-14" y="-36" width="28" height="72" rx="14" fill="url(#shieldGrad)" />
+    <rect x="-36" y="-14" width="72" height="28" rx="14" fill="url(#shieldGrad)" />
+    <circle cx="0" cy="0" r="8" fill="#FFFFFF" />
+  </g>
+
+  <!-- Floating Glass Card: Next Scheduled Vaccine -->
+  <g filter="url(#floatShadow)">
+    <rect x="310" y="275" width="230" height="120" rx="20" fill="url(#glassCardGrad)" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" />
+    <circle cx="348" cy="315" r="20" fill="#F5F3FF" />
+    <!-- Syringe miniature -->
+    <path d="M342 321 L354 309 M348 315 L352 319 M345 312 L349 316" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" />
+    <text x="378" y="312" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#17233D">Next: Pentavalent-3</text>
+    <text x="378" y="328" font-family="Inter, sans-serif" font-size="11" fill="#64748B">Due: 14 Weeks Milestone</text>
+    <rect x="338" y="348" width="180" height="30" rx="15" fill="#5B8DEF" fill-opacity="0.12" />
+    <text x="428" y="367" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#5B8DEF" text-anchor="middle">Book Slot at Shifa Hospital</text>
+  </g>
+
+  <!-- Floating ambient particles -->
+  <circle cx="150" cy="340" r="14" fill="#38BDF8" opacity="0.4" />
+  <circle cx="460" cy="130" r="18" fill="#A78BFA" opacity="0.3" />
+  <circle cx="210" cy="70" r="8" fill="#5B8DEF" opacity="0.5" />
+</svg>

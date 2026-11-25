@@ -1,0 +1,83 @@
+:root {
+  /* Brand Colors */
+  --primary: #5B8DEF;
+  --primary-hover: #4777D6;
+  --primary-light: rgba(91, 141, 239, 0.12);
+  --primary-glow: rgba(91, 141, 239, 0.35);
+
+  --secondary: #A78BFA;
+  --secondary-hover: #8B5CF6;
+  --secondary-light: rgba(167, 139, 250, 0.12);
+  --secondary-glow: rgba(167, 139, 250, 0.35);
+
+  --accent-cyan: #38BDF8;
+  --accent-emerald: #10B981;
+  --accent-amber: #F59E0B;
+  --accent-rose: #EF4444;
+
+  /* Neutrals & Dark Navy */
+  --dark-navy: #17233D;
+  --dark-navy-rgb: 23, 35, 61;
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+
+  /* Light Theme Glass & Surfaces */
+  --bg-app: #F3F6FC;
+  --bg-gradient: radial-gradient(circle at 15% 15%, rgba(91, 141, 239, 0.15) 0%, transparent 40%),
+                   radial-gradient(circle at 85% 20%, rgba(167, 139, 250, 0.15) 0%, transparent 40%),
+                   radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.12) 0%, transparent 50%),
+                   #F3F6FC;
+  
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.45);
+  --glass-bg-solid: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-border-subtle: rgba(226, 232, 240, 0.7);
+  --glass-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.6);
+  --glass-shadow-hover: 0 22px 45px -12px rgba(91, 141, 239, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.9);
+  --glass-blur: blur(20px);
+  --glass-blur-lg: blur(30px);
+
+  /* Status Colors */
+  --status-success-bg: rgba(16, 185, 129, 0.12);
+  --status-success-text: #059669;
+  --status-success-border: rgba(16, 185, 129, 0.3);
+
+  --status-warning-bg: rgba(245, 158, 11, 0.12);
+  --status-warning-text: #D97706;
+  --status-warning-border: rgba(245, 158, 11, 0.3);
+
+  --status-danger-bg: rgba(239, 68, 68, 0.12);
+  --status-danger-text: #DC2626;
+  --status-danger-border: rgba(239, 68, 68, 0.3);
+
+  --status-info-bg: rgba(91, 141, 239, 0.12);
+  --status-info-text: #2563EB;
+  --status-info-border: rgba(91, 141, 239, 0.3);
+
+  /* macOS Traffic Light Colors */
+  --mac-close: #FF5F56;
+  --mac-minimize: #FFBD2E;
+  --mac-zoom: #27C93F;
+
+  /* Typography & Layout Tokens */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 72px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,84 @@
+/* Admin Portal Specific Styles */
+
+/* Report Print Container */
+.report-paper {
+  background: #FFFFFF;
+  color: #1E293B;
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+[data-theme="dark"] .report-paper {
+  background: #1E293B;
+  color: #F8FAFC;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #5B8DEF;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  background: var(--glass-bg-subtle);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+}
+
+.report-meta-item strong {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.report-meta-item span {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Vaccine Inventory Status Pill */
+.vaccine-status-available {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+  border: 1px solid var(--status-success-border);
+}
+
+.vaccine-status-unavailable {
+  background: var(--status-danger-bg);
+  color: var(--status-danger-text);
+  border: 1px solid var(--status-danger-border);
+}
+
+/* Print Media Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .report-paper, .report-paper * {
+    visibility: visible;
+  }
+  .report-paper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5cm;
+    box-shadow: none;
+    background: #FFF !important;
+    color: #000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

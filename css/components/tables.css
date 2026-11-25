@@ -1,0 +1,111 @@
+/* Glassmorphic Tables System */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  -webkit-overflow-scrolling: touch;
+}
+
+.glass-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.88rem;
+}
+
+.glass-table th {
+  background: var(--glass-bg-subtle);
+  color: var(--text-muted);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--glass-border-subtle);
+  white-space: nowrap;
+}
+
+.glass-table th:first-child {
+  border-top-left-radius: var(--radius-sm);
+}
+
+.glass-table th:last-child {
+  border-top-right-radius: var(--radius-sm);
+  text-align: right;
+}
+
+.glass-table td {
+  padding: 1rem 1.2rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--glass-border-subtle);
+  vertical-align: middle;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background var(--transition-fast);
+}
+
+[data-theme="dark"] .glass-table td {
+  background: rgba(17, 24, 39, 0.2);
+}
+
+.glass-table tr:hover td {
+  background: rgba(91, 141, 239, 0.06);
+}
+
+.glass-table td:last-child {
+  text-align: right;
+}
+
+.table-avatar-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.table-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.table-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+/* Empty State */
+.table-empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--text-muted);
+}
+
+.table-empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.6;
+}
+
+/* Table Toolbar */
+.table-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.table-search-input {
+  max-width: 320px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>VAXORA — Premium Vaccine Management System</title>
+  <meta name="description" content="VAXORA is a next-generation pediatric immunization and vaccine management platform featuring macOS-inspired glassmorphism.">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="assets/svg/icons/vaxora-logo.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Chart.js via CDN for Dashboard Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Initial Application Loader (macOS Glass) -->
+  <div id="app-initial-loader" class="app-initial-loader" aria-label="Loading VAXORA platform">
+    <div class="loader-glass-card">
+      <div class="loader-logo-wrap">
+        <svg class="loader-shield-svg" width="60" height="60" viewBox="0 0 44 44" fill="none">
+          <path d="M22 4 C32 4 40 9.5 40 19.5 C40 31 25.5 39.5 22 42 C18.5 39.5 4 31 4 19.5 C4 9.5 12 4 22 4 Z" stroke="#5B8DEF" stroke-width="3" fill="rgba(91, 141, 239, 0.15)"/>
+          <path d="M22 13 L22 27 M15 20 L29 20" stroke="#5B8DEF" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="22" cy="20" r="3.5" fill="#FFF"/>
+        </svg>
+        <div class="loader-spinner-ring"></div>
+      </div>
+      <h2 class="loader-brand-title">VAX<span style="color:#5B8DEF">ORA</span></h2>
+      <p class="loader-message">Initializing Immunization OS...</p>
+    </div>
+  </div>
+
+  <!-- Top Route Progress Bar -->
+  <div id="page-progress-loader" class="page-progress-bar" aria-hidden="true"></div>
+
+  <!-- Application Root Mount Target -->
+  <div id="app"></div>
+
+  <!-- Global Floating Toast Notification Container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ES6 Modular Application Bootstrap -->
+  <script type="module" src="js/core/app.js"></script>
+</body>
+</html>

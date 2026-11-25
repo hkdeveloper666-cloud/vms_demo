@@ -1,0 +1,35 @@
+/* VAXORA Master Stylesheet Aggregator */
+
+/* Base Design Tokens & Reset */
+@import url('base/variables.css');
+@import url('base/reset.css');
+@import url('base/typography.css');
+@import url('base/animations.css');
+
+/* Themes */
+@import url('themes/light.css');
+@import url('themes/dark.css');
+
+/* Core Glassmorphism Components */
+@import url('components/glass-ui.css');
+@import url('components/buttons.css');
+@import url('components/forms.css');
+@import url('components/cards.css');
+@import url('components/tables.css');
+@import url('components/modals.css');
+@import url('components/sidebar.css');
+@import url('components/navbar.css');
+@import url('components/notifications.css');
+
+/* Layouts */
+@import url('layouts/landing.css');
+@import url('layouts/dashboard.css');
+@import url('layouts/auth.css');
+
+/* Role Pages */
+@import url('pages/admin.css');
+@import url('pages/parent.css');
+@import url('pages/hospital.css');
+
+/* Responsive */
+@import url('responsive/responsive.css');
